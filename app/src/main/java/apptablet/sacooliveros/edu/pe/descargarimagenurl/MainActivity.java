@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgImagen;
     private Button btnGuardar;
 
+    Bitmap imagen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
             Log.i("doInBackground" , params.toString());
             String url = params[0];
-            Bitmap imagen = descargarImagen(url);
+             imagen = descargarImagen(url);
             return imagen;
         }
 
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
             super.onPostExecute(result);
 
-           imgImagen.setImageBitmap(result);
+           //imgImagen.setImageBitmap(result);
             pDialog.dismiss();
         }
 
