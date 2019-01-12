@@ -95,7 +95,10 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
             super.onPostExecute(result);
 
-           //imgImagen.setImageBitmap(result);
+           imgImagen.setImageBitmap(result);
+
+            guardarImagen(getApplicationContext(), "ImgGoogle", imagen);
+
             pDialog.dismiss();
         }
 
